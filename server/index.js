@@ -7,7 +7,7 @@ import path from "path";
 
 dotenv.config({ path: "server/.env" });
 
-const __dirname = path.resolve();
+const __dirname = path.resolve("D:\fullstackproject\razorpay");
 
 const PORT = process.env.PORT || 6000;
 
@@ -17,9 +17,7 @@ export const instance = new Razorpay({
   key_secret: process.env.RAZORPAY_APT_SECRET,
 });
 
-app.listen(PORT, () =>
-  console.log(`Server is working on ${process.env.PORT}`)
-);
+app.listen(PORT, () => console.log(`Server is working on ${process.env.PORT}`));
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("*", (req, res) => {
