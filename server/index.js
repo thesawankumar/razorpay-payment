@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import Razorpay from "razorpay";
 import { connect } from "./config/db.js";
 import path from "path";
+
 dotenv.config({ path: "server/.env" });
 
 const __dirname = path.resolve();
