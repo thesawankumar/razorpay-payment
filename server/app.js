@@ -3,7 +3,8 @@ export const app = express();
 import cors from "cors";
 import dotenv from "dotenv";
 import paymentRoute from "./routes/payment.js";
-dotenv.config();
+import path from "path";
+dotenv.config({ path: "server/.env" });
 app.use(cors());
 
 app.use(express.json());
